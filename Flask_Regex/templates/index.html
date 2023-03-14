@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regex Matcher</title>
+</head>
+<body>
+    <h1>Regex Matcher</h1>
+    <form method="POST">
+        <label for="test_string">Test String:</label><br>
+        <textarea id="test_string" name="test_string" rows="4" cols="50"></textarea><br>
+        <label for="regex">Regex:</label><br>
+        <input type="text" id="regex" name="regex"><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if matches %}
+        <h2>Matches:</h2>
+        <ul>
+            {% for match in matches %}
+                <li>{{ match }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
